@@ -12,7 +12,8 @@ puts "You have 0 points."
 
 unless answer == 'exit'
     
-    answer = gets.chomp("Choose a room (1 - 3) to enter or 'exit' to end the game: ")
+    puts "Choose a room (1 - 3) to enter or 'exit' to end the game: "
+    gets.chomp(answer)
 
     if answer == 1
         addition = 5
