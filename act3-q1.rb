@@ -31,6 +31,8 @@ data_array.each do |row|
     hash_array << {}
 
     (0..2).each do |x|
+        hash_array[row_no][header_array[0][x]] = row[x]
+
         puts header_array[x]
         puts row[x]
     end
