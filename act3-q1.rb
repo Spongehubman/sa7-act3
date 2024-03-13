@@ -10,11 +10,13 @@ is_header = 0
 File.foreach("example.csv") do |line|
 
     if is_header == 0
-        header_array << line.split(',')
+        x = line.chomp()
+        header_array << x.split(',')
         is_header = 1
 
     else
-        data_array << line.split(',')
+        x = line.chomp()
+        data_array << x.split(',')
     end
 
 end

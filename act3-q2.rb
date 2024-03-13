@@ -10,23 +10,24 @@ room_no = 0
 
 puts "You have 0 points."
 
-unless answer == 'exit'
+until answer == 'exit'
     
-    puts "Choose a room (1 - 3) to enter or 'exit' to end the game: "
-    gets.chomp(answer)
+    puts "Choose a room (1 - 3) to enter or 'exit' to end the game: \n"
+    answer = gets.chomp()
+    #puts answer
 
-    if answer == 1
+    if answer == '1'
         addition = 5
-    elsif answer == 2
+    elsif answer == '2'
         addition = 10
-    elsif answer == 3
+    elsif answer == '3'
         addition = 15
     end
 
     room_no = answer
     points += addition
 
-    if answer.is_a? Integer
+    unless answer == 'exit'
         puts "You entered Room #{room_no} and earned #{addition} points!"
     end
 
