@@ -14,21 +14,25 @@ until answer == 'exit'
     
     puts "Choose a room (1 - 3) to enter or 'exit' to end the game: \n"
     answer = gets.chomp()
-    #puts answer
 
-    if answer == '1'
-        addition = 5
-    elsif answer == '2'
-        addition = 10
-    elsif answer == '3'
-        addition = 15
-    end
+    unless (answer == 'exit') || (answer == "1") || (answer == "2") || (answer == "3")
+        puts "Invalid answer: please try again"
+    else
+        
+        if answer == '1'
+            addition = 5
+        elsif answer == '2'
+            addition = 10
+        elsif answer == '3'
+            addition = 15
+        end
 
-    room_no = answer
-    points += addition
+        room_no = answer
+        points += addition
 
-    unless answer == 'exit'
-        puts "You entered Room #{room_no} and earned #{addition} points!"
+        unless answer == 'exit'
+            puts "You entered Room #{room_no} and earned #{addition} points!"
+        end
     end
 
 end
